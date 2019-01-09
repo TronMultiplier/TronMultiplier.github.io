@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <title>Tron Multiplier - высокодоходная финансовая игра</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="120% одноrкратно, но быстро! Умножай свои депозиты неограниченное количество раз!">
+    <meta name="keywords" content="смарт, контракт, инвестиции, трон, tron, coin, trx, игра, стратегия, заработок в интернете, пассивный доход, инвесторы, инвестиционный фонд, доход, финансы, халява, простой заработок, как заработать в интернете, ставки, bet, бет, умный контракт, криптовалюта, баунти, биткоин, bitcoin, деньги, легкие деньги, ммм, млм, dice2win, eosbet, mmm3eth, easy invest, изи инвест, 333eth, gorgona, инвестиционный фонд, финансовая пирамида">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tron Multiplier - высокодоходная финансовая игра">
+    <meta property="og:description" content="120% одноrкратно, но быстро! Умножай свои депозиты неограниченное количество раз!">
+    <meta property="og:image" content="../img/tron_preview.png"/>
+
+    <link rel="shortcut icon" href="../img/tron_icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="../css/dest/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/dest/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/dest/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dest/hover.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <script src="../js/dest/jquery-2.1.4.min.js"></script>
+    <script src="../js/dest/TronWeb.js"></script>
+    <script src="../js/dest/wow.min.js"></script>
+    <script src="../js/dest/countUp.js"></script>
+    <script src="../js/dest/web.js"></script>
+    <script src="../js/dest/tronapp.js"></script>
+    <script src="../js/dest/sweetalert.min.js"></script>
+    <script src="../js/dest/tippy.min.js"></script>
+    <script src="./run.js"></script>
+
+</head>
+<body style="opacity: 0">
+
+<!-- TOOLTIP -->
+<div id="tooltip-wrapper" class="hidden">
+    <span class="tooltip-text">
+        ...
+    </span>
+</div>
+
+<!-- TITLE -->
+<div id="inline-popups" class="project-nav animated fadeInDownBig">
+    <div style="margin: 0" class="row">
+        <div class="col-6">
+            <a name="top">
+                <span id="project-name">Tron Multiplier</span>
+            </a>
+        </div>
+        <div class="col-6" style="text-align: right">
+            <a href="https://t.me/TronMultiplierRu" class="hvr-bob" target="_blank"><span class="icon-align-right social-icon fab fa-telegram"></span></a>
+            <a href="https://bitcointalk.org" class="hvr-bob" target="_blank"><span class="icon-align-right social-icon fab fa-bitcoin"></span></a>
+            <a href="https://tronscan.org/#/contract/TTL3w3MEvkaBBYurE2HkWGEAZ1LQZwcb6U" class="hvr-bob" target="_blank"><span style="font-weight: bold !important;" class="icon-align-right social-icon fas fa-info-circle"></span></a>
+        </div>
+    </div>
+</div>
+<br>
+<!-- HEADER -->
+<div>
+    <div align="center">
+        <h4 style="padding: 0 10px" class="animated fadeInDown delay-1s"><span id="godround">Высокодоходная финансовая игра</span></h4><br>
+        <div class="tron">
+            <br>
+        </div>
+        <br>
+        <div class="pyramid">
+            <br>
+            <h1 style="padding: 0 10px" class="pot animated fadeInUp delay-1s"><span id="roundpot">120%</span> однократно, но быстро!</h1><br>
+            <h2 style="padding: 0 10px" class="animated fadeInUp delay-1s"><span id="pharaoh">Умножай свои депозиты неограниченное количество раз</span></h2>
+            <br>
+            <span style="padding: 0 10px" class="animated fadeInUp delay-1s" id="showroundon"><button href="#concept" type="button" class="btn btn-danger">Сделать депозит</button>
+				<br><small>Минимальный дезит: <span id="pharaohreq">100</span> TRX</small>
+                </span>
+            <br><br><br>
+            <br><br><br>
+        </div>
+    </div>
+</div>
+<br>
+<!-- STATS -->
+<div style="padding: 0 20px">
+    <div class="jumbotron border-double wow fadeIn" data-wow-delay="1s" align="center">
+        <h2>Статистика игры</h2>
+        <div style="margin: 40px 0" class="row">
+            <div style="padding: 13px" class="col-sm-6 col-md-3">
+                <div>
+                    <h1 id="count-trx">...</h1>
+                    <h4>Всего в игре TRX</h4>
+                </div>
+            </div>
+            <div style="padding: 13px" class="col-sm-6 col-md-3">
+                <div>
+                    <h1 id="count-rate">...</h1>
+                    <h4>Всего в игре USD</h4>
+                </div>
+            </div>
+            <div style="padding: 13px" class="col-sm-6 col-md-3">
+                <div>
+                    <h1 id="count-deposits">...</h1>
+                    <h4>Депозитов в очереди</h4>
+                </div>
+            </div>
+            <div style="padding: 13px" class="col-sm-6 col-md-3">
+                <div>
+                    <h1 id="count-first-amount">...</h1>
+                    <h5>Осталось выплатить TRX первому в очереди</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- ACCOUNT -->
+    <div style="position: relative" class="jumbotron wow fadeIn" align="center" >
+        <div id="install-alert">
+            <h3>Пожалуйста, авторизуйтесь в Tron Chrome Wallet</h3>
+            <p>Если вы еще не скачали расширение, загрузите <a target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" class="extension">TronLink</a> or <a target="_blank" href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk" class="extension">TronPay</a> для взаимодействия с сайтом</p>
+            <p>Убедитесь что вы находитесь в mainnet сети, не используйте тестовую сеть</p>
+        </div>
+        <img class="icon-align-left-tron" src="../img/tron_circle.png">
+        <img class="icon-align-right-tron" src="../img/tron_circle.png">
+        <h2>Мой аккаунт</h2>
+        <div id="stats" class="blur">
+            <div style="text-align: center">
+                <span id="account-address">...</span>
+                <br>
+                <span>Детальная информация по вашим депозитам</span>
+                <div style="height: 15px"></div>
+            </div>
+            <div class="card-deck" style="padding: 0 10px">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 style="font-weight: lighter;">Номер</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 id="count-queue-number">...</h1>
+                        <h4>В очереди</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 style="font-weight: lighter;">Осталось выплатить</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 id="count-payout-left">...</h1>
+                        <h4>TRX</h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h4 style="font-weight: lighter;">Депозитов</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 id="count-active-deposits">...</h1>
+                        <h4>Активных</h4>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- REF LINK -->
+    <div id="concept" class="jumbotron wow fadeIn" align="center">
+        <h2>Сделать депозит</h2>
+        <div style="max-width: 1000px">
+            <p style="margin-top: 16px">Каждый депозит автоматически выплачивается первому участнику в очереди, пока он не получит <span class="pot">120%</span> от суммы своего депозита</p>
+            <p>После этого он удаляется из очереди, освобождая место следующему участнику - таким образом очередь двигается.</p>
+        </div>
+        <div style="height: 10px"></div>
+        <div style="margin: 0">
+            <form id="form-deposit">
+                <div class="form-group" data--duration=".7s" data--delay=".3s">
+                    <input id="input-deposit" value="3000" autocomplete="off" style="text-align: center; font-weight: bold" type="text">
+                    <button type="submit" id="btn-deposit" class="btn btn-danger">Внести TRX</button>
+                </div>
+                <div id="account-balance-wrapper" style="margin-bottom: 10px; margin-top: 10px">
+                    На кошельке: <span id="account-balance">...</span> TRX
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <!-- EXPLANATION -->
+    <div class="jumbotron border-dashed wow fadeIn">
+        <a name="info">
+            <h4>Быстрый старт</h4>
+        </a><br>
+        <div class="infobox">
+            <p>Контракт организует участников в очередь</p>
+            <p>Каждый депозит автоматически направляется на выплаты первому участнику в очереди, до достижения 120% от суммы его депозита</p>
+            <p>После этого он удаляется из очереди, освобождая место следующему участнику - таким образом очередь двигается</p>
+            <p>Весь процесс происходит с соблюдением определенных условий</p>
+        </div>
+        <br>
+        <p><b>Какие условия отправки транзакций на смарт контракт?</b></p>
+        <div class="infobox">
+            <p>Осуществлять транзакции на адрес смарт-контракта следует строго с ваших личных кошельков, к которым у вас есть приватные ключи. Не делайте депозиты с бирж, платежных систем и обменников!</p>
+            <p>
+                Рекомендуемые кошельки: <a target="_blank" href="https://chrome.google.com/webstore/detail/tronlink/ibnejdfjmmkpcnlpebklmnkoeoihofec" class="link">TronLink</a> or <a target="_blank" href="https://chrome.google.com/webstore/detail/tronpay/gjdneabihbmcpobmfhcnljaojmgoihfk" class="link">TronPay</a><br>
+                Минимальный депозит: <span class="regular">100 TRX</span>
+            </p>
+        </div>
+        <br>
+        <p><b>Распределение TRX:</b></p>
+        <div class="infobox">
+            <span>- 92% на выплаты участникам</span>
+            <div style="height: 10px"></div>
+            <span>- 5% на маркетинг</span>
+            <div style="height: 10px"></div>
+            <span>- 3% на поддержку проекта</span>
+            <div style="height: 10px"></div>
+        </div>
+        <br>
+        <p><b>Смарт контракт</b></p>
+        <div class="infobox">
+            Посмотреть на смарт-контракт можно на </span><a target="_blank" href="https://tronscan.org/#/contract/TTL3w3MEvkaBBYurE2HkWGEAZ1LQZwcb6U" class="link">tronscan</a>
+            <br>
+            Исходный код нашего смарт-контракта доступен </span><a target="_blank" href="https://tronsmartcontract.space/#/interact/TTL3w3MEvkaBBYurE2HkWGEAZ1LQZwcb6U" class="link">здесь</a>
+            <div style="height: 10px"></div>
+        </div>
+    </div>
+    <br>
+</div>
+<div style="margin: 15px 0; text-align: center">
+</div>
+<div style="height: 10px"></div>
+<a href="#inline-popups"><img style="width: 30px" class="icon-block-center" src="../img/arrow_circle.png"></a>
+<div style="height: 15px"></div>
+<div class="switch">
+    <a class="link" href="../en">English version</a>
+</div>
+</body>
+</html>
