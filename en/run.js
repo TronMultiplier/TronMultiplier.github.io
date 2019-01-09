@@ -7,7 +7,7 @@ web({
                 extension: "Please login to TronLink or TronPay",
                 minimal: "Minimum deposit: 100 TRX",
                 balance: "Lack of TRX balance on the wallet",
-                fee: "You need to leave at least 1 TRX on your balance to pay transaction fee"
+                fee: "You need to leave at least 3 TRX on your balance to pay transaction fee"
             }
         },
         tx: {
