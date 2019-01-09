@@ -4,7 +4,7 @@ web({
     text: {
         form: {
             errors: {
-                extension: "Пожалуйста, авторизуйте в TronLink или TronPay",
+                extension: "Пожалуйста, авторизуйтесь в TronLink или TronPay",
                 minimal: "Минимальный депозит: 100 TRX",
                 balance: "Недостаточный баланс на кошельке",
                 fee: "Необходимо оставить на балансе как мимумум 1 TRX для комиссии"
